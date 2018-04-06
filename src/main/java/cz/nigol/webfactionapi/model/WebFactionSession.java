@@ -22,8 +22,9 @@ public class WebFactionSession {
     /**
      * @param sessionId the sessionId to set
      */
-    public void setSessionId(String sessionId) {
+    public WebFactionSession setSessionId(String sessionId) {
         this.sessionId = sessionId;
+        return this;
     }
 
     /**
@@ -36,8 +37,9 @@ public class WebFactionSession {
     /**
      * @param xmlRpcClientFactory the xmlRpcClientFactory to set
      */
-    public void setXmlRpcClientFactory(XmlRpcClientFactory xmlRpcClientFactory) {
+    public WebFactionSession setXmlRpcClientFactory(XmlRpcClientFactory xmlRpcClientFactory) {
         this.xmlRpcClientFactory = xmlRpcClientFactory;
+        return this;
     }
 
     /**
@@ -50,8 +52,9 @@ public class WebFactionSession {
     /**
      * @param username the username to set
      */
-    public void setUsername(String username) {
+    public WebFactionSession setUsername(String username) {
         this.username = username;
+        return this;
     }
 
     /**
@@ -64,8 +67,9 @@ public class WebFactionSession {
     /**
      * @param webServer the webServer to set
      */
-    public void setWebServer(String webServer) {
+    public WebFactionSession setWebServer(String webServer) {
         this.webServer = webServer;
+        return this;
     }
 
     /**
@@ -78,8 +82,9 @@ public class WebFactionSession {
     /**
      * @param version the version to set
      */
-    public void setVersion(int version) {
+    public WebFactionSession setVersion(int version) {
         this.version = version;
+        return this;
     }
 
     /**
@@ -92,8 +97,9 @@ public class WebFactionSession {
     /**
      * @param home the home to set
      */
-    public void setHome(String home) {
+    public WebFactionSession setHome(String home) {
         this.home = home;
+        return this;
     }
 
     /**
@@ -106,8 +112,9 @@ public class WebFactionSession {
     /**
      * @param mailServer the mailServer to set
      */
-    public void setMailServer(String mailServer) {
+    public WebFactionSession setMailServer(String mailServer) {
         this.mailServer = mailServer;
+        return this;
     }
 
     /**
@@ -120,7 +127,8 @@ public class WebFactionSession {
     /**
      * @param id the id to set
      */
-    public void setId(int id) {
+    public WebFactionSession setId(int id) {
         this.id = id;
+        return this;
     }
 }
