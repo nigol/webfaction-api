@@ -1,6 +1,8 @@
 package cz.nigol.webfactionapi.impl;
 
+import java.util.Arrays;
 import java.util.Map;
+import java.util.List;
 
 import org.apache.xmlrpc.XmlRpcException;
 import org.apache.xmlrpc.client.XmlRpcClient;
@@ -24,7 +26,7 @@ public class WebFactionLogin {
     public WebFactionSession login(XmlRpcClientFactory clientFactory, String username, String password,
             String serverName) throws XmlRpcException {
         XmlRpcClient client = clientFactory.getXmlRpcClient();
-        Object[] params = new Object[]{username, password, serverName};
+		List<String> params = Arrays.asList(username, password, serverName);
         Object[] result = (Object[]) client.execute("login", params);
         return prepareSessionInstance(result);
     }
