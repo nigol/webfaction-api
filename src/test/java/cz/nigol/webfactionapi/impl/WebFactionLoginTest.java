@@ -54,5 +54,6 @@ public class WebFactionLoginTest {
         assertEquals("4", session.getHome());
         assertEquals("5", session.getMailServer());
         assertEquals(6, session.getId());
+        assertEquals(clientFactory, session.getXmlRpcClientFactory());
     }    
 }

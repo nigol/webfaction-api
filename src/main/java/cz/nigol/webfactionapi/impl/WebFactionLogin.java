@@ -28,10 +28,10 @@ public class WebFactionLogin {
         XmlRpcClient client = clientFactory.getXmlRpcClient();
 		List<String> params = Arrays.asList(username, password, serverName);
         Object[] result = (Object[]) client.execute("login", params);
-        return prepareSessionInstance(result);
+        return prepareSessionInstance(result, clientFactory);
     }
 
-    private WebFactionSession prepareSessionInstance(Object[] response) {
+    private WebFactionSession prepareSessionInstance(Object[] response, XmlRpcClientFactory clientFactory) {
         WebFactionSession session = new WebFactionSession();
         @SuppressWarnings("unchecked")
         Map<String, Object> map = (Map<String, Object>) response[1];
@@ -41,7 +41,8 @@ public class WebFactionLogin {
             .setVersion((Integer) map.get("version"))
             .setHome((String) map.get("home"))
             .setMailServer((String) map.get("mail_server"))
-            .setId((Integer) map.get("id"));
+            .setId((Integer) map.get("id"))
+            .setXmlRpcClientFactory(clientFactory);
         return session;
     }
 }

@@ -9,7 +9,7 @@ public class DiskUsage {
     private Date lastReading;
     private String machine;
     private String name;
-    private double size;
+    private int size;
 
     /**
      * @return the lastReading
@@ -58,14 +58,14 @@ public class DiskUsage {
     /**
      * @return the size
      */
-    public double getSize() {
+    public int getSize() {
         return size;
     }
 
     /**
      * @param size the size to set
      */
-    public void setSize(double size) {
+    public void setSize(int size) {
         this.size = size;
     }
 
